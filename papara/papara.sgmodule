@@ -1,0 +1,13 @@
+#!category=✨ From 2M
+#!name=Papara Enhance
+#!desc=强开手机3DS推送/自动过3DS验证
+#!author=outtime
+#!arguments=MaxConfirmValue:70
+#!arguments-desc=- MaxConfirmValue: 最大可自动同意3DS验证的付款金额
+#!system=ios
+
+[MITM]
+hostname = %APPEND% api.papara.com
+
+[Script]
+Papara = type=http-response,pattern=^https:\/\/api\.papara\.com\/user\/(deviceregister|\/list|notification\/dashboardNotifications),requires-body=1,debug=1,max-size-1,script-path=https://raw.githubusercontent.com/hiouttime/sgmodule/main/papara/papara.js,argument="{"maxConfirmValue":{{{MaxConfirmValue}}}}"
