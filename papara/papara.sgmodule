@@ -10,4 +10,4 @@
 hostname = %APPEND% api.papara.com
 
 [Script]
-Papara = type=http-response,pattern=^https:\/\/api\.papara\.com\/user\/(deviceregister|\/list|notification\/dashboardNotifications),requires-body=1,debug=1,max-size-1,script-path=https://raw.githubusercontent.com/hiouttime/sgmodule/main/papara/papara.js,argument="{"maxConfirmValue":{{{MaxConfirmValue}}}}"
+Papara = type=http-request,pattern=^https:\/\/api\.papara\.com\/user\/(deviceregister|\/list|notification\/dashboardNotifications),requires-body=1,debug=1,max-size-1,script-path=https://raw.githubusercontent.com/hiouttime/sgmodule/main/papara/papara.js,argument="{"maxConfirmValue":{{{MaxConfirmValue}}}}"
