@@ -2,7 +2,7 @@
 #!name=Papara Enhance
 #!desc=强开手机3DS推送/自动过3DS验证
 #!author=outtime
-#!arguments=MaxConfirmValue:70
+#!arguments=MaxConfirmValue:110
 #!arguments-desc=- MaxConfirmValue: 最大可自动同意3DS验证的付款金额
 #!system=ios
 
